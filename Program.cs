@@ -23,7 +23,18 @@ namespace HelloWorld
                 int Ido = (v.Vora * 60 + v.Vperc) - (v.Eora * 60 + v.Eperc);
                 KintiIdo.Add(Ido);
             }
-            Console.WriteLine($"{KintiIdo.Count}");
+            //Console.WriteLine($"{KintiIdo.Count}");
+            int Bevetel = 0;
+            int Egesz = 0;
+            int Tenyleges = 0;
+            foreach (var k in KintiIdo)
+            {
+                Egesz = k / 30;
+                if (k % 30 != 0)
+                { Tenyleges = Egesz + 1; }
+                Bevetel += Tenyleges * 2400;
+            }
+            Console.WriteLine($"Bevétel: {Bevetel} Ft");
         }
 
         private static void Feladat7()
