@@ -21,6 +21,12 @@ namespace HelloWorld
             var reszek = BekertIdo.Split(':');
             int Ora = int.Parse(reszek[0]) * 60;
             int Perc = int.Parse(reszek[1]) * 60;
+            int VizsgaltIdo = Ora + Perc;
+            foreach (var v in Vizi_List)
+            {
+                if (v.Eora * 60 + v.Eperc < VizsgaltIdo || VizsgaltIdo < v.Vora * 60 + v.Vperc)
+                { Console.WriteLine($"{v.Eora}:{v.Eperc} - {v.Vora}:{v.Vperc} : {v.Nev}"); }
+            }
         }
 
         private static void Feladat6()
