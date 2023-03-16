@@ -13,7 +13,7 @@ namespace HelloWorld
 
         private static void Feladat5()
         {
-            Console.WriteLine("5.feladat: ");
+            Console.WriteLine("5.feladat: Adatok száma");
             Console.WriteLine($"Letárolt adatok száma: {Vizi_List.Count}");
         }
 
