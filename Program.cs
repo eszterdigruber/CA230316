@@ -11,6 +11,19 @@ namespace HelloWorld
             Feladat5(); Console.WriteLine("\n----------------------------\n");
             Feladat6(); Console.WriteLine("\n----------------------------\n");
             Feladat7(); Console.WriteLine("\n----------------------------\n");
+            Feladat8(); Console.WriteLine("\n----------------------------\n");
+        }
+
+        private static void Feladat8()
+        {
+            Console.WriteLine("8.feladat: Bevétel");
+            List<int> KintiIdo = new List<int>();
+            foreach (var v in Vizi_List)
+            {
+                int Ido = (v.Vora * 60 + v.Vperc) - (v.Eora * 60 + v.Eperc);
+                KintiIdo.Add(Ido);
+            }
+            Console.WriteLine($"{KintiIdo.Count}");
         }
 
         private static void Feladat7()
