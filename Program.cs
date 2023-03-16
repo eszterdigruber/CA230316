@@ -16,7 +16,7 @@ namespace HelloWorld
         private static void Feladat7()
         {
             Console.WriteLine("7.feladat: Bekérés");
-            Console.Write("Kérem adjon meg egy időpontot (óra:perc): ");
+            Console.Write("Kérem adjon meg egy időpontot (óra:perc) alakban: ");
             string BekertIdo = Console.ReadLine();
             var reszek = BekertIdo.Split(':');
             int Ora = int.Parse(reszek[0]) * 60;
