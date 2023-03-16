@@ -10,6 +10,17 @@ namespace HelloWorld
             Feladat4Beolvasas(); Console.WriteLine("\n----------------------------\n");
             Feladat5(); Console.WriteLine("\n----------------------------\n");
             Feladat6(); Console.WriteLine("\n----------------------------\n");
+            Feladat7(); Console.WriteLine("\n----------------------------\n");
+        }
+
+        private static void Feladat7()
+        {
+            Console.WriteLine("7.feladat: Bekérés");
+            Console.Write("Kérem adjon meg egy időpontot (óra:perc): ");
+            string BekertIdo = Console.ReadLine();
+            var reszek = BekertIdo.Split(':');
+            int Ora = int.Parse(reszek[0]) * 60;
+            int Perc = int.Parse(reszek[1]) * 60;
         }
 
         private static void Feladat6()
